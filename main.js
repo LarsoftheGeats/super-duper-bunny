@@ -11,14 +11,14 @@ function buttonClick(evt){
             let person=res.data.results[0].residents[i]
             axios.get(person).then( (res1) => {
                 //console.log(res1)
+                //
+                //let {name} =res1.data;
                 let aldResident = res1.data.name;
                 let residentHTML = document.createElement("h2")
-                residentHTML.classList.add("nameClass")
                 residentHTML.textContent=aldResident;
                 document.body.appendChild(residentHTML)
-            } )
-        }
-        
+            })
+        }    
     })
 }
 
